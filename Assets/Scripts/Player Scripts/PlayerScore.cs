@@ -37,22 +37,26 @@ public class PlayerScore : MonoBehaviour
                 scoreCount++;
             }
             previousPosition = transform.position;
+            GameplayConroller.instance.SetScore(scoreCount);
         }
     }
     public void OnTriggerEnter2D(Collider2D target)
     {
-        Debug.Log("OnTriggerEnter -- PlayerScore");
         if (target.tag == "Coin")
         {
             coinCount++;
             scoreCount += 200;
             AudioSource.PlayClipAtPoint(coinClip, transform.position);
             target.gameObject.SetActive(false);
+            GameplayConroller.instance.SetScore(scoreCount);
+            GameplayConroller.instance.SetCoinScore(lifeCount);
         }
         if (target.tag == "Life")
         {
             lifeCount++;
             scoreCount += 300;
+            GameplayConroller.instance.SetScore(scoreCount);
+            GameplayConroller.instance.SetLifeScore(lifeCount);
             AudioSource.PlayClipAtPoint(lifeClip, transform.position);
             target.gameObject.SetActive(false);
         }
@@ -62,6 +66,7 @@ public class PlayerScore : MonoBehaviour
             countScore = false;
             transform.position = new Vector3(500, 500, 0);
             lifeCount--;
+            GameplayConroller.instance.GameOverShowPanel(scoreCount, coinCount);
         }
         if (target.tag == "Deadly")
         {
@@ -69,6 +74,7 @@ public class PlayerScore : MonoBehaviour
             countScore = false;
             transform.position = new Vector3(500, 500, 0);
             lifeCount--;
+            GameplayConroller.instance.GameOverShowPanel(scoreCount, coinCount);
         }
     }
 }//PlayerScore

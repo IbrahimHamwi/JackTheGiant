@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4362104698298908478}
   - component: {fileID: 4362104698298908473}
   - component: {fileID: 4362104698298908477}
-  - component: {fileID: 4362104698298908476}
   - component: {fileID: 6692984863644224365}
   - component: {fileID: 1223029278}
   - component: {fileID: 1223029279}
+  - component: {fileID: 2414839553781591433}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -128,32 +128,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &4362104698298908476
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4362104698298908472}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.005012974, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 1.23}
-    newSize: {x: 0.92, y: 1.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7098963, y: 1.23}
-  m_EdgeRadius: 0
 --- !u!114 &6692984863644224365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinClip: {fileID: 0}
   lifeClip: {fileID: 0}
+--- !u!70 &2414839553781591433
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362104698298908472}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.75, y: 1.23}
+  m_Direction: 0
