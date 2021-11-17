@@ -14,6 +14,7 @@ public class MainMenuController : MonoBehaviour
     // Update is called once per frame
     public void StartGame()
     {
+        GameManager.instance.gameStartedFromMainMenu = true;
         SceneManager.LoadScene("GameplayScene");
     }
     public void HighscoreMenu()
