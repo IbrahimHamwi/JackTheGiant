@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour
     {
         MakeSingleton();
     }
-    void onEnable()
+    void OnEnable()
     {
         SceneManager.sceneLoaded += LevelFinishedLoading;
     }
-    void onDisable()
+    void OnDisable()
     {
         SceneManager.sceneLoaded -= LevelFinishedLoading;
     }
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         {
             if (gameRestartedAfterPlayerDied)
             {
+                Debug.Log("game started after player died");
                 GameplayConroller.instance.SetScore(score);
                 GameplayConroller.instance.SetCoinScore(coinScore);
                 GameplayConroller.instance.SetLifeScore(lifeScore);
@@ -48,8 +49,16 @@ public class GameManager : MonoBehaviour
                 GameplayConroller.instance.SetScore(0);
                 GameplayConroller.instance.SetCoinScore(0);
                 GameplayConroller.instance.SetLifeScore(2);
-
             }
+            else
+            {
+                Debug.Log("game started from other");
+            }
+        }
+        else
+        {
+            Debug.Log("other scene");
+
         }
     }
 
@@ -64,6 +73,26 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+    public void CheckGameStatus(int score, int coinScore, int lifeScore)
+    {
+        if (lifeScore < 0)
+        {
+            gameRestartedAfterPlayerDied = false;
+            gameStartedFromMainMenu = false;
+            GameplayConroller.instance.GameOverShowPanel(score, coinScore);
+        }
+        else
+        {
+            this.score = score;
+            this.coinScore = coinScore;
+            this.lifeScore = lifeScore;
+
+            gameStartedFromMainMenu = false;
+            gameRestartedAfterPlayerDied = true;
+
+            GameplayConroller.instance.PlayerDiedRestartTheGame();
         }
     }
 }

@@ -66,7 +66,7 @@ public class PlayerScore : MonoBehaviour
             countScore = false;
             transform.position = new Vector3(500, 500, 0);
             lifeCount--;
-            GameplayConroller.instance.GameOverShowPanel(scoreCount, coinCount);
+            GameManager.instance.CheckGameStatus(scoreCount, coinCount, lifeCount);
         }
         if (target.tag == "Deadly")
         {
@@ -74,7 +74,7 @@ public class PlayerScore : MonoBehaviour
             countScore = false;
             transform.position = new Vector3(500, 500, 0);
             lifeCount--;
-            GameplayConroller.instance.GameOverShowPanel(scoreCount, coinCount);
+            GameManager.instance.CheckGameStatus(scoreCount, coinCount, lifeCount);
         }
     }
 }//PlayerScore

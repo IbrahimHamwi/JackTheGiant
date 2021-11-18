@@ -43,6 +43,15 @@ public class GameplayConroller : MonoBehaviour
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("MainMenu");
     }
+    public void PlayerDiedRestartTheGame()
+    {
+        StartCoroutine(PlayerDiedRestart());
+    }
+    IEnumerator PlayerDiedRestart()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("GameplayScene");
+    }
     public void SetScore(int score)
     {
         scoreText.text = "x" + score;
