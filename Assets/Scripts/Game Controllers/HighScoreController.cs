@@ -11,7 +11,7 @@ public class HighScoreController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SetScoreBasedOnDifficulty();
     }
     void SetScore(int score, int coinScore)
     {

@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc61349f0ab84446bd2933599eb628a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easySign: {fileID: 1484158822}
+  mediumSign: {fileID: 748329403}
+  hardSign: {fileID: 640167248}
 --- !u!4 &14852482
 Transform:
   m_ObjectHideFlags: 0
@@ -331,7 +334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 404696843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 14852481}
+        m_TargetAssemblyTypeName: OptionsController, Assembly-CSharp
+        m_MethodName: HardDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &404696843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +466,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 414145583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 14852481}
+        m_TargetAssemblyTypeName: OptionsController, Assembly-CSharp
+        m_MethodName: MediumDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &414145583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +823,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1207204632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 14852481}
+        m_TargetAssemblyTypeName: OptionsController, Assembly-CSharp
+        m_MethodName: EasyDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1207204632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +994,7 @@ GameObject:
   - component: {fileID: 1345457713}
   - component: {fileID: 1345457712}
   m_Layer: 5
-  m_Name: Hard Button (1)
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
