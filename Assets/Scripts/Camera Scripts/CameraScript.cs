@@ -38,7 +38,8 @@ public class CameraScript : MonoBehaviour
         {
             MoveCamera();
         }
-        void MoveCamera()
+    }
+    void MoveCamera()
         {
             Vector3 temp = transform.position;
             float oldY = temp.y;
@@ -50,5 +51,5 @@ public class CameraScript : MonoBehaviour
                 speed = maxSpeed;
 
         }
-    }
+
 }

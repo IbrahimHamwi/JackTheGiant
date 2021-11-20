@@ -36,6 +36,6 @@ public class HighScoreController : MonoBehaviour
 
     public void GoBackToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneFader.instance.LoadLevel("MainMenu");
     }
 }
