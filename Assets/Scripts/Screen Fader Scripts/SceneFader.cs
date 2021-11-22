@@ -30,15 +30,13 @@ public class SceneFader : MonoBehaviour
     }
     public void LoadLevel(string level)
     {
-        Debug.Log("Load Level Entered");
         StartCoroutine(FadeInOut(level));
     }
     IEnumerator FadeInOut(string level)
     {
-        Debug.Log("FadedINOUT entered");
         fadePanel.SetActive(true);
         fadeAnim.Play("FadeIn");
-        yield return StartCoroutine(MyCoroutine.WaitForRealSeconds(0.5f));
+        yield return StartCoroutine(MyCoroutine.WaitForRealSeconds(1.0f));
 
         SceneManager.LoadScene(level);
         fadeAnim.Play("FadeOut");
@@ -47,4 +45,11 @@ public class SceneFader : MonoBehaviour
 
         fadePanel.SetActive(false);
     }
+
+
+
+
+
+
+
 }
