@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int score, coinScore, lifeScore;
 
+    public bool isJoystickMoving = false;
+
     // Start is called before the first frame update
     void Awake()
     {

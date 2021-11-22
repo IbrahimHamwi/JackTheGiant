@@ -14,6 +14,8 @@ public class Joystick : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     }
     public void OnPointerDown(PointerEventData data)
     {
+        GameManager.instance.isJoystickMoving = true;
+
         if (gameObject.name == "Left")
         {
             playerMove.SetMoveLeft(true);
@@ -25,6 +27,8 @@ public class Joystick : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     }
     public void OnPointerUp(PointerEventData data)
     {
+        GameManager.instance.isJoystickMoving = false;
+
         playerMove.StopMoving();
     }
 }

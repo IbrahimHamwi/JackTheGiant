@@ -56,7 +56,8 @@ public class Player : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Walk", false);
+            if (!GameManager.instance.isJoystickMoving)
+                animator.SetBool("Walk", false);
         }
 
         myBody.AddForce(new Vector2(forceX, 0));
