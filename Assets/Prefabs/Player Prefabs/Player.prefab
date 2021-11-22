@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1223029278}
   - component: {fileID: 1223029279}
   - component: {fileID: 2414839553781591433}
+  - component: {fileID: 558890392064619801}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -166,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f276fc6a9f8bbb4482fe3bc27b92306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinClip: {fileID: 0}
-  lifeClip: {fileID: 0}
+  coinClip: {fileID: 8300000, guid: 44c955d712f756248a2d4129287cb1ec, type: 3}
+  lifeClip: {fileID: 8300000, guid: 2dd0f4efe7310c94e9a9a62b70afbfd2, type: 3}
 --- !u!70 &2414839553781591433
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -184,3 +185,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.75, y: 1.23}
   m_Direction: 0
+--- !u!114 &558890392064619801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362104698298908472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba2f04fb757c934490f70e8af0246a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
